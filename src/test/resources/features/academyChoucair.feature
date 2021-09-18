@@ -1,16 +1,16 @@
 # Autor: Brandon
 @stories
 Feature: Academy Choucair
-  As a user, it seeks to automate the registration of the Utest page
+  As a user, I want to learn how to automate in screamplay at the Choucair Academy the automation course
   @scenario1
-  Scenario: Searhc for a automation Resgistrarion Utest
+  Scenario: Searhc for a automation course
 
-    Given brandon wants to automate the Utest page
-    | SIGNUP   |
-    | <SIGNUP> |
-    When he register the data on the Utest page
+    Given than brandon wants to learn automation at the academy choucair
+    | strUser   | strPassword  |
+    | <strUser> | <strPassword>      |
+    When he search for the course Recursos Automatizacion Bancolombia on the choucair academy plataform
     | strCourse               |
     | <strCourse> |
-    Then Register user following the steps for automation
+    Then he finds course called resources Recursos Automatizacion Bancolombia
     | str Course              |
     | <strCourse> |

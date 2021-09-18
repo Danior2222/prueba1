@@ -1,11 +1,11 @@
 package co.com.choucair.certification.firstproject.model;
 
 public class AcademyChoucairData {
-//    private String strUser;
-//    private String strPassword;
+    private String strUser;
+    private String strPassword;
     private String strCourse;
 
-/*    public String getStrUser() {
+    public String getStrUser() {
         return strUser;
     }
 
@@ -20,7 +20,7 @@ public class AcademyChoucairData {
     public void setStrPassword(String strPassword) {
         this.strPassword = strPassword;
     }
-*/
+
     public String getStrCourse() {
         return strCourse;
     }

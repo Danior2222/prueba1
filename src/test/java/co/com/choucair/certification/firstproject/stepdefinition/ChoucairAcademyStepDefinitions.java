@@ -22,17 +22,16 @@ public class ChoucairAcademyStepDefinitions {
     }
     @Given("^than brandon wants to learn automation at the academy Choucair$")
     public void thanBrandonWantsToLearnAutomationAtTheAcademyChoucair(List<AcademyChoucairData> academyChoucairData) throws Exception{
-        OnStage.theActorCalled(requiredActor:"Brandon").wasAbleto(OpenUp.thePage(),(Login.onThePage()));
+        OnStage.theActorCalled("Brandon").wasAbleTo(OpenUp.thePage(), (Login.onThePage(academyChoucairData.get(0).getStrUser(),academyChoucairData.get(0).getStrPassword())));
     }
-    @When("^he register the data on the Utest page$")
+    @When("^he search for the course(.*) Recursos Automatizacion Bancolombia on the choucair academy plataform$")
     public void heSearchForTheCourseRecursosAutomatizacionBancolombiaOnTheChoucairAcademyPlataform(List<AcademyChoucairData> academyChoucairData) throws Exception{
         OnStage.theActorInTheSpotlight().attemptsTo(Search.the(academyChoucairData.get(0).getStrCourse()));
 
     }
-    @Then("^Register user following the steps for automation$")
+    @Then("^he finds course called resources (.*)$")
     public void heFindsCourseCalledResourcesRecursosAutomatizacionBancolombia(List<AcademyChoucairData> academyChoucairData) throws Exception{
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(academyChoucairData.get(0).getStrCourse()))
-        );
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(academyChoucairData.get(0).getStrCourse())));
 
     }
 }
